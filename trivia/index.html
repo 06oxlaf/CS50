@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+
+<html lang="en">
+    <head>
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+        <link href="styles.css" rel="stylesheet">
+        <title>Trivia!</title>
+    </head>
+    <body>
+        <div class="header">
+            <h1>Trivia!</h1>
+        </div>
+        <div class="container">
+            <div class="section">
+                <h2>Part 1: Multiple Choice </h2>
+                <hr>
+                <h3>
+                    Which team is the best football team in the word?
+                </h3>
+                <h3 id = "ans">  </h3>
+                <button id = "A"> Man U </button>
+                <button id = "B"> Leeds </button>
+                <button id = "C"> Bayern munich </button>
+                <script>
+                    let Abutton = document.querySelector('#A');
+                    let Bbutton = document.querySelector('#B');
+                    let Cbutton = document.querySelector('#C');
+                    let ans = document.querySelector('#ans');
+                    document.querySelector('#A').addEventListener('click', function()
+                    {
+                        Abutton.style.backgroundColor = 'red';
+                        ans.firstChild.nodeValue = 'Incorrect';
+                        Bbutton.style.backgroundColor= '#d9edff';
+                        Cbutton.style.backgroundColor= '#d9edff';
+                    });
+
+                    document.querySelector('#B').addEventListener('click', function() {
+                        Bbutton.style.backgroundColor = 'green';
+                        ans.firstChild.nodeValue = 'Correct';
+                        Abutton.style.backgroundColor= '#d9edff';
+                        Cbutton.style.backgroundColor= '#d9edff';
+                    });
+
+                    document.querySelector('#C').addEventListener('click', function() {
+                        Cbutton.style.backgroundColor = 'red';
+                        ans.firstChild.nodeValue = 'Incorrect';
+                        Bbutton.style.backgroundColor= '#d9edff';
+                        Abutton.style.backgroundColor= '#d9edff';
+                    });
+                </script>
+            </div>
+
+            <div class="section">
+                <h2>Part 2: Free Response</h2>
+                <hr>
+                <h3>
+                    What is the largest animal in the world?
+                </h3>
+                <input id="user" name="user" type="text"></input>
+                <button id ="but"> Check</button>
+                <h3 id = "ans2"></h3>
+                <script>
+                    const ans2 = document.getElementById('ans2');
+                    document.querySelector('#but').addEventListener('click', function(){
+                        const user = document.getElementById('user');
+                        console.log(user.textContent);
+                        if (user.value == "Blue Whale"){
+                            ans2.textContent ="Correct!";
+                            user.style.backgroundColor = 'green';
+                        }
+                        else {
+                            ans2.textContent ="Incorrect!";
+                            user.style.backgroundColor = 'red';
+                        }
+                    }
+                    )
+                </script>
+                <!-- TODO: Add free response question here -->
+            </div>
+        </div>
+    </body>
+</html>

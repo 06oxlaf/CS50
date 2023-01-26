@@ -1,0 +1,35 @@
+body {
+    background-color: #ec9706;
+    font-family: "baskerville, serif";
+}
+
+.Title {
+    background-color: rgba(76, 175, 80, 0.0);
+    border-color: rgba(76, 175, 80, 0.0);
+    font-family: "baskerville, serif";
+    font-size: 22px;
+    text-decoration: underline;
+}
+
+.Title:hover {
+    text-decoration: none;
+}
+
+.center {
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 40%;
+  }
+
+.container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+.map {
+    height: 400px;
+    width: 100%;
+  }
